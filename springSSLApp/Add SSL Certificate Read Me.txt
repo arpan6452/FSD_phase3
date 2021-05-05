@@ -1,0 +1,5 @@
+1. Go to a folder location.
+2. keytool -list -keystore ssl-server.jks
+3. keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
+4. Then place the ssl-server.jks file into resource folder of the spring boot project and start the project by Run as Spring boot(normally how we start an app)
+5. Access the url https://localhost:8443/secured it should be secured
